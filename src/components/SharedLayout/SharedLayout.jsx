@@ -1,22 +1,14 @@
+import { AppBar } from 'components/AppBar/AppBar';
+import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-
+import { Container } from './SharedLayout.styled';
 export const SharedLayout = () => {
   return (
     <Container>
-      <Header>
-        <Logo>
-          <span role="img" aria-label="computer icon">
-            💻
-          </span>{' '}
-          GoMerch Store
-        </Logo>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/register">Register</Link>
-          <Link to="/login">LogIn</Link>
-        </nav>
-      </Header>
-      <Outlet />
+      <AppBar />
+      <Suspense fallback={<div>Loading page...</div>}>
+        <Outlet />
+      </Suspense>
     </Container>
   );
 };
