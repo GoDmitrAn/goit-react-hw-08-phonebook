@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
 import { Form, Label, LabelName, Submit } from './RegisterForm.styled';
 

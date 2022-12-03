@@ -5,6 +5,8 @@ import { Route, Routes } from 'react-router-dom';
 import { refreshUser } from 'redux/auth/operations';
 import { SharedLayout } from './SharedLayout/SharedLayout';
 import { useAuth } from 'hooks';
+import { RestrictedRoute } from './RestrictedRoute';
+import { PrivateRoute } from './PrivateRoute';
 
 const Contacts = lazy(() => import('../pages/Contacts'));
 const Home = lazy(() => import('../pages/Home'));
@@ -24,9 +26,25 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<SharedLayout />}>
             <Route index element={<Home />} />
-            <Route path="login" element={<Login />} />
-            <Route path="register" element={<Register />} />
-            <Route path="contacts" element={<Contacts />} />
+            <Route
+              path="login"
+              element={
+                <RestrictedRoute component={<Login />} redirectTo="/contacts" />
+              }
+            />
+            <Route
+              path="register"
+              element={
+                <RestrictedRoute
+                  component={<Register />}
+                  redirectTo="/contacts"
+                />
+              }
+            />
+            <Route
+              path="contacts"
+              element={<PrivateRoute component={<Contacts />} redirectTo="/" />}
+            />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

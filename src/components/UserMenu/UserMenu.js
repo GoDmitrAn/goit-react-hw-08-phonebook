@@ -13,7 +13,6 @@ export const UserMenu = () => {
       <button type="button" onClick={() => dispatch(logout())}>
         Logout
       </button>
-      {/* <button type="button">logout</button> */}
     </Wrapper>
   );
 };
