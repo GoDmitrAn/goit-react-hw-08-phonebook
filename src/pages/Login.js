@@ -1,9 +1,15 @@
-export const Login = () => {
+import React from 'react';
+// import { Helmet } from 'react-helmet';
+import { LoginForm } from 'components/LoginForm/LoginForm';
+
+const Login = () => {
   return (
     <main>
-      <div>
-        <h2>Login</h2>
-      </div>
+      {/* <Helmet>
+        <title>Login</title>
+      </Helmet> */}
+      <LoginForm />
     </main>
   );
 };
+export default Login;

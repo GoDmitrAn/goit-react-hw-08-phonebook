@@ -1,10 +1,12 @@
-import { Contacts } from 'pages/Contacts';
-import { Home } from 'pages/Home';
-import { Login } from 'pages/Login';
-import { NotFound } from 'pages/NotFound';
-import { Register } from 'pages/Register';
+import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { SharedLayout } from './SharedLayout/SharedLayout';
+
+const Contacts = lazy(() => import('../pages/Contacts'));
+const Home = lazy(() => import('../pages/Home'));
+const Login = lazy(() => import('../pages/Login'));
+const NotFound = lazy(() => import('../pages/NotFound'));
+const Register = lazy(() => import('../pages/Register'));
 
 export const App = () => {
   return (
