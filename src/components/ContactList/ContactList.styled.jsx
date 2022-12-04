@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const ListBox = styled.ul`
   width: 330px;
-  padding-left: 20px;
+  padding-left: 0px;
 `;
 export const ContactListItem = styled.li`
   display: flex;
@@ -26,4 +26,13 @@ export const Span = styled.span`
 `;
 export const Phone = styled.span`
   margin-left: auto;
+`;
+export const ContactsBox = styled.div`
+  padding-top: 8px;
+  margin: auto;
+  margin-top: 15px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
