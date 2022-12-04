@@ -2,13 +2,6 @@ import { createSlice, isAnyOf } from '@reduxjs/toolkit';
 import { logout } from 'redux/auth/operations';
 import { addUser, deleteUser, fetchContacts } from './operations';
 
-const handlePending = state => {
-  state.isLoading = true;
-};
-const handleRejected = (state, action) => {
-  state.isLoading = false;
-  state.error = action.payload;
-};
 const usersSlice = createSlice({
   name: 'contacts',
   initialState: {
