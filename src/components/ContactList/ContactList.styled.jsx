@@ -1,4 +1,11 @@
 import styled from '@emotion/styled';
+import { IconButton } from '@mui/material';
+export const MyDeleteButton = styled(IconButton)`
+  padding: 2px;
+  &:hover {
+    background-color: #e6a3c7;
+  }
+`;
 
 export const ListBox = styled.ul`
   width: 330px;
@@ -7,7 +14,10 @@ export const ListBox = styled.ul`
 export const ContactListItem = styled.li`
   display: flex;
   margin-bottom: 10px;
-  background-color: #e2e2e2;
+  background-color: #e2e2e2a4;
+  padding-left: 8px;
+  border-radius: 12px;
+  align-items: center;
 `;
 export const DelBtn = styled.button`
   margin-left: auto;

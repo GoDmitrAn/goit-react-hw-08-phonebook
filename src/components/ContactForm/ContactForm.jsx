@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Form, LabelName, Submit } from './ContactForm.styled';
 import { selectUsers } from 'redux/contacts/selectors';
 import { addUser } from 'redux/contacts/operations';
+import { IconButton } from '@mui/material';
+import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
@@ -50,7 +52,10 @@ export const ContactForm = () => {
           placeholder="number"
         />
       </label>
-      <Submit type="submit">Add contact</Submit>
+      {/* <Submit type="submit">Add contact</Submit> */}
+      <IconButton type="submit">
+        <PersonAddAlt1Icon color="primary" fontSize="medium" />
+      </IconButton>
     </Form>
   );
 };
