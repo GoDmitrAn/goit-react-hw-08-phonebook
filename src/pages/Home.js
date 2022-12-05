@@ -1,14 +1,16 @@
+import { HomeTitle } from 'components/Home/Home.styled';
+
 const Home = () => {
   return (
     <main>
       <div>
-        <h1>
+        <HomeTitle>
           {' '}
-          Contact manager welcome page{' '}
+          Сreate easily your contact book{' '}
           <span role="img" aria-label="Greeting icon">
             💁‍♀️
           </span>
-        </h1>
+        </HomeTitle>
       </div>
     </main>
   );

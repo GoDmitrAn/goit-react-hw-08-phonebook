@@ -7,6 +7,7 @@ export const Link = styled(NavLink)`
   text-decoration: none;
   color: black;
   font-weight: 500;
+  display: flex;
 
   &.active {
     color: white;

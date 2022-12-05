@@ -14,10 +14,11 @@ export const ListBox = styled.ul`
 export const ContactListItem = styled.li`
   display: flex;
   margin-bottom: 10px;
-  background-color: #e2e2e2a4;
+  background-color: #ff980059;
   padding-left: 8px;
-  border-radius: 12px;
+  border-radius: 14px;
   align-items: center;
+  border: 1px solid #ff5722;
 `;
 export const DelBtn = styled.button`
   margin-left: auto;
@@ -32,7 +33,7 @@ export const Span = styled.span`
   font-weight: 500;
   width: 100%;
   display: flex;
-  padding-right: 10px;
+  padding-right: 20px;
 `;
 export const Phone = styled.span`
   margin-left: auto;
